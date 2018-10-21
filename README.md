@@ -2,3 +2,5 @@
 Automated building of docker container with nginx (with custom start page) inside.
 
 The automation is written on Ansible.
+
+![The results of execution Ansible script:](/screen_result.png)
