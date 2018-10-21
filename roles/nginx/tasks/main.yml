@@ -1,0 +1,30 @@
+- name: creating Dockerfile folder
+  file:
+    path: "{{ docker_dir_path }}"
+    state: directory
+
+- name: copying Dockerfile to remote host
+  copy:
+    src: "{{ docker_file_path_src }}"
+    dest: "{{ docker_file_path_dest }}"
+
+- name: Build nginx image
+  docker_image:
+    name: "{{ docker_image_name }}"
+    path: "{{ docker_file_path_dest }}"
+    tag: "{{ docker_image_tag }}"
+
+
+- name: run container nginx with custom page
+  docker_container:
+    name: "{{ docker_container_name }}"
+    image: "{{ docker_image_name }}"
+    state: "{{ container_state }}"
+    ports: "{{ ports }}"
+
+- name: Open port for http service
+  firewalld: service=http permanent=true state=enabled
+  notify:
+  - restart the firewalld service
+
+

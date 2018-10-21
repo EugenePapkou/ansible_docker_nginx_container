@@ -1,0 +1,8 @@
+docker_file_path_src: Dockerfile
+docker_dir_path: /opt/nginx_docker
+docker_file_path_dest: /opt/nginx_docker
+docker_image_tag: eugene_papkou/nginx:1.0
+docker_image_name: epapkou/nginx:1.0
+docker_container_name: nginx1.0
+ports: 8080:80
+container_state: started

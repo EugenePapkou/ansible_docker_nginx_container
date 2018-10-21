@@ -1,0 +1,8 @@
+- name: Run nginx in docker
+  hosts: webservers
+  become: yes
+  become_user: root
+
+  roles:
+  - nginx
+
