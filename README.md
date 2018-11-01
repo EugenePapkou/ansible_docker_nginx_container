@@ -3,4 +3,4 @@ Automated building of docker container with nginx (with custom start page) insid
 
 The automation is written on Ansible.
 
-The results of execution Ansible script:![](/screen_result.png)
+The result of execution Ansible script:![](/screen_result.png)
