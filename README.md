@@ -1,6 +1,6 @@
 # ansible_docker_nginx_container
-Automated building of docker container with nginx (with custom start page) inside.
+Automation of building Docker image with nginx web server inside and running it.
 
-The automation is written on Ansible.
+The automation is written on Ansible. Container consist of custom web page for web server.
 
 The result of execution Ansible script:![](/screen_result.png)
